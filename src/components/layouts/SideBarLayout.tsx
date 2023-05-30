@@ -34,7 +34,7 @@ const SideBarLayout:FC<Props> = ( {children, ...props} ) => {
     return (
         <>
             <div className="flex">
-                <div className={`relative h-screen bg-sky-700 p-5 pt-16 ${open ? "w-72" : "w-20"} duration-300 relative`}>
+                <div className={`relative min-h-full h-screen bg-sky-700 p-5 pt-16 ${open ? "w-72" : "w-20"} duration-300 relative`}>
                     <BsArrowLeftSquare 
                     className={`bg-slate-200 text-sky-700 text-3xl 
                     absolute -right-3 rounded 
@@ -55,7 +55,7 @@ const SideBarLayout:FC<Props> = ( {children, ...props} ) => {
                         {menu.map((item, index)=> (
                             <>
                             {item.submenu ? (
-                                <li key={index} className={`text-slate-200 p-2 text-sm flex items-center gap-x-4 cursor-pointer hover:bg-gray-500 rounded-md ${item.spacing ? "mt-24" : "mt-2"}`}>
+                                <li key={index} onClick={()=>{setSubOpen(!subOpen)}} className={`text-slate-200 p-2 text-sm flex items-center gap-x-4 cursor-pointer hover:bg-gray-500 rounded-md ${item.spacing ? "mt-24" : "mt-2"}`}>
                                 <span className="text-xl block float-left mt-0.5">
                                     {item.icon}
                                 </span>
@@ -115,7 +115,7 @@ const SideBarLayout:FC<Props> = ( {children, ...props} ) => {
                        
                     </ul>
                 </div>
-                <main className="flex container">{children}</main>
+                <main className="container">{children}</main>
             </div>
 
         </>

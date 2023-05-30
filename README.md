@@ -13,11 +13,6 @@ This is a [T3 Stack](https://create.t3.gg/) project bootstrapped with `create-t3
 
 User stories:
 
-- As a user, I want to be able to create a project plan
-  - title
-  - category
-  - timeframe
-  - goals/success criteria
 - As a user, I would like a dashboard to view all current projects and progress(visualization)
 - As a user, I want to be able to be able to upload files or images attached to a project
 - As a user, I want to be able to progress my project through the five stages. (https://project-management.com/project-management-phases/#what)
@@ -31,4 +26,12 @@ Non-priority:
 
 - As a user, I want to be able to add a project that is already in progress
 - As a user, I want to be able to add my motivation for completing a project
-- As a user, I want to be able to favorite certain projects and have them populated on my dashboard
+
+complete:
+
+- As a user, I want to be able to create a project plan
+  - title
+  - category
+  - timeframe
+  - goals/success criteria
+  - As a user, I want to be able to favorite certain projects and have them populated on my dashboard

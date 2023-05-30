@@ -13,7 +13,7 @@ const Home: NextPage = () => {
         <meta name="description" content="" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <main>
+      <main className="">
         <SideBarLayout >
           home
         </SideBarLayout >

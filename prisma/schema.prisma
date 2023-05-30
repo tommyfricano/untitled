@@ -26,6 +26,7 @@ model Account {
     id                String  @id @default(cuid())
     userId            String
     type              String
+    favorites         Int
     provider          String
     providerAccountId String
     refresh_token     String? // @db.Text
@@ -56,6 +57,7 @@ model User {
     image         String?
     accounts      Account[]
     sessions      Session[]
+    Project       Project[]
 }
 
 model VerificationToken {
@@ -68,10 +70,14 @@ model VerificationToken {
 
 model Project {
     id              String   @id @default(cuid())
+    user            User     @relation(fields: [userId], references: [id])
+    userId          String
     title           String
-    image           String?
-    category        Int
-    startDate       DateTime
-    endDate         DateTime
+    status          String
+    favorite        Boolean
+    image           String
+    category        String
+    startDate       DateTime @db.Date
+    endDate         DateTime @db.Date
     successCriteria String
 }

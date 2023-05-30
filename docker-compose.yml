@@ -21,6 +21,16 @@ services:
     volumes:
       - db:/var/lib/mysql
     command: --default-authentication-plugin=mysql_native_password
+
+  s3-bucket:
+    build: .
+    restart: always
+    ports:
+      - 9000:9000
+    command: "node s3.js"
+    volumes:
+      - ".:/home/app"
+
 # Names our volume
 volumes:
   db:
